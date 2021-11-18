@@ -78,6 +78,8 @@ class MiaSurvey extends \Illuminate\Database\Eloquent\Model
     protected $table = 'mia_survey';
     
     //protected $casts = ['data' => 'array'];
+
+    protected $fillable = ['creator_id'];
     /**
      * Indicates if the model should be timestamped.
      *
