@@ -1,0 +1,48 @@
+{
+    "name": "agencycoda/mia-survey-mezzio",
+    "description": "The library for Mezzio",
+    "version": "0.0.1",
+    "minimum-stability": "stable",
+    "license": "MIT",
+    "authors": [{
+        "name": "Matias Camiletti",
+        "homepage": "https://agencycoda.com"
+    }],
+    "require": {
+        "php": "^7.3",
+        "agencycoda/mia-core-mezzio": "dev-main",
+        "agencycoda/mia-eloquent-mezzio": "dev-main",
+        "agencycoda/mia-auth-mezzio": "dev-main",
+        "paxha/laravel-recursive-relationships": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mia\\Survey\\": "src/"
+        }
+    },
+    "scripts": {
+        "serve": "php -S 0.0.0.0:8080 -t example/"
+    },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/agencycoda/mia-core-mezzio.git"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/agencycoda/mia-eloquent-mezzio.git"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/agencycoda/mia-auth-mezzio.git"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/agencycoda/mia-category-mezzio.git"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/agencycoda/mia-location-mezzio.git"
+        }
+    ]
+}
