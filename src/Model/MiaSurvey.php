@@ -95,6 +95,14 @@ class MiaSurvey extends \Illuminate\Database\Eloquent\Model
     {
         return $this->belongsTo(MIAUser::class, 'creator_id');
     }
+    /**
+    * 
+    * @return \Illuminate\Database\Eloquent\Relations\HasMany
+    */
+    public function questions()
+    {
+        return $this->hasMany(MiaSurveyQuestion::class, 'survey_id')->orderBy('ord', 'asc');
+    }
 
 
     /**

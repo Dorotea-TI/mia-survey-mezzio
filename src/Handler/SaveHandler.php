@@ -2,6 +2,11 @@
 
 namespace Mia\Survey\Handler;
 
+use \Illuminate\Database\Capsule\Manager as DB;
+use Mia\Survey\Handler\Question\RemoveHandler;
+use Mia\Survey\Handler\Question\SaveHandler as QuestionSaveHandler;
+use Mia\Survey\Model\MiaSurvey;
+
 /**
  * Description of SaveHandler
  * 
@@ -48,19 +53,42 @@ class SaveHandler extends \Mia\Auth\Request\MiaAuthRequestHandler
         //$item->completed = intval($this->getParam($request, 'completed', ''));        
         
         try {
+            // Init Transactions
+            DB::beginTransaction();
+            // Save Survey
             $item->save();
+            // Process Questions
+            $this->processQuestions($request, $item);
+            // Commit transactions
+            DB::commit();
         } catch (\Exception $exc) {
+            // Cancel transaction
+            DB::rollBack();
+            // Return Error
             return new \Mia\Core\Diactoros\MiaJsonErrorResponse(-2, $exc->getMessage());
         }
 
         // Devolvemos respuesta
         return new \Mia\Core\Diactoros\MiaJsonResponse($item->toArray());
     }
+
+    protected function processQuestions(\Psr\Http\Message\ServerRequestInterface $request, MiaSurvey $survey)
+    {
+        $questions = $this->getParam($request, 'questions', []);
+        foreach($questions as $question){
+            if(array_key_exists('deleted', $question) && $question['deleted'] == 1){
+                $handler = new RemoveHandler();
+            } else {
+                $handler = new QuestionSaveHandler();
+            }
+            $handler->handle($request->withParsedBody($question));
+        }
+    }
     
     /**
      * 
      * @param \Psr\Http\Message\ServerRequestInterface $request
-     * @return \App\Model\MiaSurvey
+     * @return \Mia\Survey\Model\MiaSurvey
      */
     protected function getForEdit(\Psr\Http\Message\ServerRequestInterface $request)
     {
