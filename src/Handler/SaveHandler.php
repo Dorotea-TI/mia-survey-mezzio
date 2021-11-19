@@ -50,6 +50,7 @@ class SaveHandler extends \Mia\Auth\Request\MiaAuthRequestHandler
         $item->caption = $this->getParam($request, 'caption', '');
         $item->type = intval($this->getParam($request, 'type', '0'));
         $item->photo = $this->getParam($request, 'photo', '');
+        $item->token = md5(time() . $item->title);
         //$item->completed = intval($this->getParam($request, 'completed', ''));        
         
         try {
