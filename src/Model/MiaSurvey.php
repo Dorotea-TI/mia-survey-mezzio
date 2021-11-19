@@ -75,6 +75,9 @@ use Mia\Auth\Model\MIAUser;
  */
 class MiaSurvey extends \Illuminate\Database\Eloquent\Model
 {
+    const STATUS_INACTIVE = 0;
+    const STATUS_ACTIVE = 1;
+    
     protected $table = 'mia_survey';
     
     //protected $casts = ['data' => 'array'];

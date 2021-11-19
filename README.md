@@ -11,7 +11,7 @@ $app->route('/mia-survey/save', [\Mia\Auth\Handler\AuthHandler::class, Mia\Surve
 //$app->route('/mia_survey_done/fetch/{id}', [\Mia\Auth\Handler\AuthHandler::class, App\Handler\MiaSurveyDone\FetchHandler::class], ['GET', 'OPTIONS', 'HEAD'], 'mia_survey_done.fetch');
 //$app->route('/mia_survey_done/list', [\Mia\Auth\Handler\AuthHandler::class, App\Handler\MiaSurveyDone\ListHandler::class], ['POST', 'OPTIONS', 'HEAD'], 'mia_survey_done.list');
 //$app->route('/mia_survey_done/remove/{id}', [\Mia\Auth\Handler\AuthHandler::class, App\Handler\MiaSurveyDone\RemoveHandler::class], ['GET', 'DELETE', 'OPTIONS', 'HEAD'], 'mia_survey_done.remove');
-//$app->route('/mia_survey_done/save', [\Mia\Auth\Handler\AuthHandler::class, App\Handler\MiaSurveyDone\SaveHandler::class], ['POST', 'OPTIONS', 'HEAD'], 'mia_survey_done.save');
+$app->route('/mia-survey/done/save', [\Mia\Auth\Handler\AuthHandler::class, Mia\Survey\Handler\Done\SaveHandler::class], ['POST', 'OPTIONS', 'HEAD'], 'mia_survey_done.save');
 //$app->route('/mia_survey_invitation/fetch/{id}', [\Mia\Auth\Handler\AuthHandler::class, App\Handler\MiaSurveyInvitation\FetchHandler::class], ['GET', 'OPTIONS', 'HEAD'], 'mia_survey_invitation.fetch');
 //$app->route('/mia_survey_invitation/list', [\Mia\Auth\Handler\AuthHandler::class, App\Handler\MiaSurveyInvitation\ListHandler::class], ['POST', 'OPTIONS', 'HEAD'], 'mia_survey_invitation.list');
 //$app->route('/mia_survey_invitation/remove/{id}', [\Mia\Auth\Handler\AuthHandler::class, App\Handler\MiaSurveyInvitation\RemoveHandler::class], ['GET', 'DELETE', 'OPTIONS', 'HEAD'], 'mia_survey_invitation.remove');

@@ -71,7 +71,7 @@ class MiaSurveyDone extends \Illuminate\Database\Eloquent\Model
 {
     protected $table = 'mia_survey_done';
     
-    //protected $casts = ['data' => 'array'];
+    protected $casts = ['data' => 'array'];
     /**
      * Indicates if the model should be timestamped.
      *
