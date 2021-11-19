@@ -2,6 +2,8 @@
 
 namespace Mia\Survey\Handler;
 
+use Mia\Core\Exception\MiaException;
+
 /**
  * Description of FetchHandler
  * 

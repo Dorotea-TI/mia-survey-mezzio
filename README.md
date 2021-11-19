@@ -4,10 +4,10 @@
 
 2. Incluir rutas:
 ```php
-//$app->route('/mia_survey/fetch/{id}', [\Mia\Auth\Handler\AuthHandler::class, App\Handler\MiaSurvey\FetchHandler::class], ['GET', 'OPTIONS', 'HEAD'], 'mia_survey.fetch');
+$app->route('/mia-survey/fetch/{id}', [\Mia\Auth\Handler\AuthHandler::class, Mia\Survey\Handler\FetchHandler::class], ['GET', 'OPTIONS', 'HEAD'], 'mia_survey.fetch');
 $app->route('/mia-survey/list', [\Mia\Auth\Handler\AuthHandler::class, Mia\Survey\Handler\ListHandler::class], ['POST', 'OPTIONS', 'HEAD'], 'mia_survey.list');
-//$app->route('/mia_survey/remove/{id}', [\Mia\Auth\Handler\AuthHandler::class, App\Handler\MiaSurvey\RemoveHandler::class], ['GET', 'DELETE', 'OPTIONS', 'HEAD'], 'mia_survey.remove');
-//$app->route('/mia_survey/save', [\Mia\Auth\Handler\AuthHandler::class, App\Handler\MiaSurvey\SaveHandler::class], ['POST', 'OPTIONS', 'HEAD'], 'mia_survey.save');
+$app->route('/mia-survey/remove/{id}', [\Mia\Auth\Handler\AuthHandler::class, Mia\Survey\Handler\RemoveHandler::class], ['GET', 'DELETE', 'OPTIONS', 'HEAD'], 'mia_survey.remove');
+$app->route('/mia-survey/save', [\Mia\Auth\Handler\AuthHandler::class, Mia\Survey\Handler\SaveHandler::class], ['POST', 'OPTIONS', 'HEAD'], 'mia_survey.save');
 //$app->route('/mia_survey_done/fetch/{id}', [\Mia\Auth\Handler\AuthHandler::class, App\Handler\MiaSurveyDone\FetchHandler::class], ['GET', 'OPTIONS', 'HEAD'], 'mia_survey_done.fetch');
 //$app->route('/mia_survey_done/list', [\Mia\Auth\Handler\AuthHandler::class, App\Handler\MiaSurveyDone\ListHandler::class], ['POST', 'OPTIONS', 'HEAD'], 'mia_survey_done.list');
 //$app->route('/mia_survey_done/remove/{id}', [\Mia\Auth\Handler\AuthHandler::class, App\Handler\MiaSurveyDone\RemoveHandler::class], ['GET', 'DELETE', 'OPTIONS', 'HEAD'], 'mia_survey_done.remove');
