@@ -80,7 +80,7 @@ class MiaSurvey extends \Illuminate\Database\Eloquent\Model
     
     protected $table = 'mia_survey';
     
-    //protected $casts = ['data' => 'array'];
+    protected $casts = ['photo' => 'array'];
 
     protected $fillable = ['creator_id'];
     /**
