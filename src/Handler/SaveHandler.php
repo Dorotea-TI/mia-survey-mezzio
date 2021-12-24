@@ -77,6 +77,7 @@ class SaveHandler extends \Mia\Auth\Request\MiaAuthRequestHandler
     {
         $questions = $this->getParam($request, 'questions', []);
         foreach($questions as $question){
+            $question['survey_id'] = $survey->id;
             if(array_key_exists('deleted', $question) && $question['deleted'] == 1){
                 $handler = new RemoveHandler();
             } else {
