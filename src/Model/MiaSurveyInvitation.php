@@ -69,6 +69,9 @@ use Mia\Auth\Model\MIAUser;
  */
 class MiaSurveyInvitation extends \Illuminate\Database\Eloquent\Model
 {
+    const TYPE_INDIVIDUAL = 0;
+    const TYPE_MULTIPLE = 1;
+
     protected $table = 'mia_survey_invitation';
     
     //protected $casts = ['data' => 'array'];
