@@ -61,6 +61,12 @@ namespace Mia\Survey\Model;
  */
 class MiaSurveyQuestion extends \Illuminate\Database\Eloquent\Model
 {
+    const TYPE_BOOLEAN = 0;
+    const TYPE_SHORT_ANSWER = 1;
+    const TYPE_TEXT_ANSWER = 2;
+    const TYPE_LINEAR_SCALE = 3;
+    const TYPE_SELECTOR = 4;
+
     protected $table = 'mia_survey_question';
     
     protected $casts = ['data' => 'array', 'val' => 'array'];
