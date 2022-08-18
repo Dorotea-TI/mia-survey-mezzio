@@ -43,6 +43,7 @@ class MiaSurveyInvitationRepository
         $item->user_id = $userId;
         $item->email = $email;
         $item->caption = $caption;
+        $item->limit = 1;
         $item->token = md5($item->user_id . $item->email . time());
         $item->save();
         return $item;
