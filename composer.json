@@ -1,12 +1,12 @@
 {
-    "name": "agencycoda/mia-survey-mezzio",
-    "description": "The library for Mezzio",
+    "name": "doroteati/mia-survey-mezzio",
+    "description": "The library for Mezzio and Dorotea",
     "version": "0.0.2",
     "minimum-stability": "stable",
     "license": "MIT",
     "authors": [{
-        "name": "Matias Camiletti",
-        "homepage": "https://agencycoda.com"
+        "name": "Heider Hernandez",
+        "homepage": "https://dorotea.co"
     }],
     "require": {
         "php": "^7.3",
@@ -26,23 +26,23 @@
     "repositories": [
         {
             "type": "git",
-            "url": "https://github.com/agencycoda/mia-core-mezzio.git"
+            "url": "https://github.com/Dorotea-TI/mia-core-mezzio.git"
         },
         {
             "type": "git",
-            "url": "https://github.com/agencycoda/mia-eloquent-mezzio.git"
+            "url": "https://github.com/Dorotea-TI/mia-eloquent-mezzio.git"
         },
         {
             "type": "git",
-            "url": "https://github.com/agencycoda/mia-auth-mezzio.git"
+            "url": "https://github.com/Dorotea-TI/mia-auth-mezzio.git"
         },
         {
             "type": "git",
-            "url": "https://github.com/agencycoda/mia-category-mezzio.git"
+            "url": "https://github.com/Dorotea-TI/mia-category-mezzio.git"
         },
         {
             "type": "git",
-            "url": "https://github.com/agencycoda/mia-location-mezzio.git"
+            "url": "https://github.com/Dorotea-TI/mia-location-mezzio.git"
         }
     ]
 }
